@@ -16,18 +16,14 @@
  */
 package org.graylog2.indexer.ranges;
 
-import com.google.auto.value.AutoValue;
-import org.graylog.autovalue.WithBeanGetter;
-
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+import com.google.auto.value.AutoValue;
+import org.graylog.autovalue.WithBeanGetter;
 import org.joda.time.DateTime;
 
-import java.util.List;
-import java.util.Set;
-
 import javax.annotation.Nullable;
+import java.util.List;
 
 @AutoValue
 @WithBeanGetter
