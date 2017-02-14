@@ -25,7 +25,6 @@ import com.lordofthejars.nosqlunit.elasticsearch2.ElasticsearchRule;
 import com.lordofthejars.nosqlunit.elasticsearch2.EmbeddedElasticsearch;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.common.settings.Settings;
-import org.graylog2.audit.AuditEventSender;
 import org.graylog2.database.NotFoundException;
 import org.graylog2.indexer.IndexSet;
 import org.graylog2.indexer.IndexSetRegistry;
@@ -36,7 +35,6 @@ import org.graylog2.indexer.retention.strategies.DeletionRetentionStrategy;
 import org.graylog2.indexer.retention.strategies.DeletionRetentionStrategyConfig;
 import org.graylog2.indexer.rotation.strategies.MessageCountRotationStrategy;
 import org.graylog2.indexer.rotation.strategies.MessageCountRotationStrategyConfig;
-import org.graylog2.plugin.system.NodeId;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.junit.Before;
@@ -77,10 +75,6 @@ public class EsIndexRangeServiceTest {
     private Client client;
     @Mock
     private EventBus localEventBus;
-    @Mock
-    private AuditEventSender auditEventSender;
-    @Mock
-    private NodeId nodeId;
     @Mock
     private IndexSetRegistry indexSetRegistry;
     private EsIndexRangeService indexRangeService;
